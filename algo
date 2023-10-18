@@ -1,0 +1,25 @@
+ALGORITHM readalg
+
+VAR
+    i:INTEGER:= 0;
+    Nb_of_words:INTEGER:= 1;
+    Nb_of_char:INTEGER:= i ;
+    Nb_Vowels:INTEGER:= 0;
+    str:STRING:
+BEGIN
+    write("input your sentense")
+    read(str)
+    WHILE (str[i]<>".") DO
+    i = i+1
+    IF (str[i]= " ") THEN
+        Nb_of_words = Nb_of_words+1
+    END_IF
+    IF (str[i]= "a" OR "e" OR "u" OR "i" OR "o") THEN
+        Nb_Vowels = Nb_Vowels+1
+    END_IF
+    END_WHILE
+
+    write("nuber of words is", Nb_of_words)
+    write("number of vowels is", Nb_Vowels)
+    write("number of characters", Nb_of_char)
+END
